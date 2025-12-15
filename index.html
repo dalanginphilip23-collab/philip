@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hale Shaneen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ffe6ea,#fff);
+  color:#333;
+  overflow-x:hidden;
+  transition:.5s;
+}
+
+body.dark{
+  background:radial-gradient(circle at top,#0b0b0b,#000);
+  color:#f2f2f2;
+}
+
+section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+h1,h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+h2{
+  color:#d6336c;
+  font-size:2.5rem;
+}
+
+/* TOGGLE */
+.theme-toggle{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:linear-gradient(135deg,#ff2d55,#b3002d);
+  color:#fff;
+  padding:12px 15px;
+  border-radius:50%;
+  cursor:pointer;
+  z-index:999;
+  box-shadow:0 0 20px rgba(255,45,85,.6);
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-family:'Dancing Script',cursive;
+  font-size:4rem;
+  animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 10px #ff9eb8 }
+  to{ text-shadow:0 0 25px #ff4d79 }
+}
+
+/* HEARTS */
+.heart{
+  position:absolute;
+  color:#ff4d79;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  0%{ transform:translateY(0); opacity:0 }
+  50%{ opacity:1 }
+  100%{ transform:translateY(-100vh); opacity:0 }
+}
+
+/* VERTICAL TIMELINE */
+.timeline-vertical{
+  max-width:700px;
+  margin:50px auto;
+  position:relative;
+  padding-left:30px;
+}
+
+.timeline-vertical::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  top:0;
+  width:4px;
+  height:100%;
+  background:linear-gradient(#ff4d79,#d6336c);
+  border-radius:5px;
+}
+
+.timeline-item{
+  margin-bottom:50px;
+  position:relative;
+  padding-left:40px;
+  opacity:0;
+  transform:translateX(-50px);
+  transition:all .8s ease-out;
+}
+
+.timeline-item.visible{
+  opacity:1;
+  transform:translateX(0);
+}
+
+.timeline-item::before{
+  content:"❤️";
+  position:absolute;
+  left:-4px;
+  top:4px;
+}
+
+.timeline-date{
+  font-size:.9rem;
+  opacity:.7;
+  margin-bottom:8px;
+}
+
+.timeline-content{
+  background:rgba(255,255,255,.7);
+  padding:20px;
+  border-radius:18px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+body.dark .timeline-content{
+  background:rgba(0,0,0,.6);
+}
+
+/* 3D GALLERY */
+.gallery-3d{
+  display:flex;
+  gap:60px;
+  overflow-x:auto;
+  padding:60px 20px;
+  perspective:1400px;
+  scroll-behavior:smooth;
+}
+
+.gallery-3d::-webkit-scrollbar{ display:none }
+
+.gallery-item{
+  min-width:280px;
+  height:380px;
+  transition:.6s;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:25px;
+  box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+/* LETTER */
+.letter{
+  background:rgba(255,255,255,.6);
+  padding:40px;
+  border-radius:25px;
+  font-family:'poppim',Arial, Helvetica, sans-serif;
+  font-size:1.6rem;
+}
+
+body.dark .letter{
+  background:rgba(0,0,0,.6);
+}
+
+/* FINAL */
+.final{text-align:center}
+
+.surprise-btn{
+  padding:15px 30px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d79;
+  color:#fff;
+  cursor:pointer;
+}
+
+.hidden-message{
+  display:none;
+  font-size:2rem;
+  margin-top:30px;
+  animation:pulse 1s infinite alternate;
+}
+
+@keyframes pulse{
+  from{ transform:scale(1) }
+  to{ transform:scale(1.1) }
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="theme-toggle" onclick="toggleDarkMode()">🌙</div>
+
+<section class="hero">
+  <div>
+    <h1>Happy 1st Anniversary Satin Labidabs143 💕</h1>
+    <p>One year down, forever to go.</p>
+  </div>
+</section>
+
+<section>
+<h2>Istorya ng ating pag mamahalan!</h2>
+<div class="timeline-vertical">
+
+<div class="timeline-item">
+        <span class="timeline-date">Dec 16, 2025</span>
+        <div class="timeline-content">Noong una mo akong sinagot</div>
+    </div>
+
+    <div class="timeline-item">
+        <span class="timeline-date">Jan 16, 2025</span>
+        <div class="timeline-content">1st Monthsary natin naalala mo ba to WAHAHAHA</div>
+    </div>
+
+    <div class="timeline-item">
+        <span class="timeline-date">Feb 16, 2025</span>
+        <div class="timeline-content">2nd monthsary natin Eto puro ayawa na tayo dito pero walang sumuko</div>
+</div>
+
+    <div class="timeline-item">
+        <span class="timeline-date">March 16, 2025</span>
+        <div class="timeline-content">3rd monthsary natin to masayang masaya ako dahil tagal agad natin</div>
+</div>
+
+    <div class="timeline-item">
+        <span class="timeline-date">April 16, 2025</span>
+    <div class="timeline-content">4th monthsary puro ayaw tayo dito pero ang tatag natin</div>
+</div>
+
+     <div class="timeline-item">
+        <span class="timeline-date">May 16, 2025</span>
+    <div class="timeline-content">5th dito tayo nag kagulo gulo bebe tanda mo ba</div>
+</div>
+     <div class="timeline-item">
+        <span class="timeline-date">June 16, 2025</span>
+    <div class="timeline-content">6th monthsary ito naman na naging maayos tayo ang nakakaintindihan na minsan</div>
+</div>
+     <div class="timeline-item">
+        <span class="timeline-date">July 16, 2025</span>
+    <div class="timeline-content">7th monthsary dito sumuko agad ako at hnd naniwala sa sarili </div>
+</div>
+     <div class="timeline-item">
+        <span class="timeline-date">August 16, 2025</span>
+    <div class="timeline-content">8th monthsary dito naguusap tayo pano maayos lahat ng mga ayaw</div>
+</div>
+     <div class="timeline-item">
+        <span class="timeline-date">September 16, 2025</span>
+    <div class="timeline-content">9th monthsary dito ko naayos sarili ko lahat ng magulo sautak at nag tiwala sayo</div>
+</div>
+     <div class="timeline-item">
+        <span class="timeline-date">October 16, 2025</span>
+    <div class="timeline-content">10th monthsary dito tayo nag simula maging maayos at masaya na walang iniisip</div>
+</div>
+    <div class="timeline-item">
+        <span class="timeline-date">November 16, 2025</span>
+    <div class="timeline-content">11th monthsary natin hnd natin akalin dalawa na sabilis ng panahon at aabot tayo dito</div>
+</div>
+     <div class="timeline-item">
+        <span class="timeline-date">Dec 16, 2025</span>
+    <div class="timeline-content">12th monthsary At ito na pinaka masayang araw Happy 1st Anniversary Satin Tuloy tuloy lang natin to bebe walang susuko ito nayon Iloveyousomuchh</div>
+</div>
+</div>
+</section>
+
+<section>
+    <h2>Mga pictures mo</h2>
+        <p style="text-align:center;opacity:.7">Scroll mo to</p>
+
+    <div class="gallery-3d">
+        <div class="gallery-item"><img src="assets/profile.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile2.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile3.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile4.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile5.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile6.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile7.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile8.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile9.jpg"></div>
+        <div class="gallery-item"><img src="assets/profile10.jpg"></div>
+    </div>
+</section>
+
+        <section>
+            <h2>Sulat ko to</h2>
+            <div class="letter">
+                    My bebe,<br><br>
+                    One year with you feels like a dream I never want to wake up from.
+                    Thank you for your love, patience, and warmth.
+                    I choose you today and always. Eme ang english google translate naman AWHAHAHAHAHAHA❤️
+                    ito lang muna masasabi ko sa ngayon at babawi ako sayo sa mga susunod na araw.
+                    Happy Anniversary my Labidabs143<br><br>
+            </div>
+</section>
+
+        <section class="final">
+        <h2>And One Last Thing…</h2>
+        <button class="surprise-btn" onclick="showSurprise()">Click Me ❤️</button>
+        <div class="hidden-message" id="surprise">I Love You Forever and ever my bebe I LOVE YOUUU SOMUCHHHHH  💕</div>
+        </section>
+
+<footer>Made with my heart and just for you</footer>
+
+<script>
+function toggleDarkMode(){
+  document.body.classList.toggle('dark'); 
+}
+
+function showSurprise(){
+  document.getElementById('surprise').style.display='block';
+  for(let i=0;i<20;i++) createHeart();
+}
+
+function createHeart(){
+  const h=document.createElement('div');
+  h.className='heart';
+  h.innerHTML='❤️';
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=Math.random()*20+15+'px';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+}
+
+/* 3D GALLERY LOGIC */
+const gallery=document.querySelector('.gallery-3d');
+const items=document.querySelectorAll('.gallery-item');
+let autoScroll=null;
+
+gallery.addEventListener('wheel',e=>{
+  e.preventDefault();
+  gallery.scrollBy({left:e.deltaY*1.2,behavior:'smooth'});
+},{passive:false});
+
+items.forEach(item=>{
+  item.addEventListener('mouseenter',()=>{
+    clearInterval(autoScroll);
+    autoScroll=setInterval(()=>{
+      const center=gallery.scrollLeft+gallery.offsetWidth/2;
+      const itemCenter=item.offsetLeft+item.offsetWidth/2;
+      gallery.scrollLeft+=(itemCenter-center)*0.08;
+    },16);
+  });
+
+  item.addEventListener('mouseleave',()=>{
+    clearInterval(autoScroll);
+  });
+});
+
+function update3D(){
+  const center=gallery.scrollLeft+gallery.offsetWidth/2;
+  items.forEach(item=>{
+    const itemCenter=item.offsetLeft+item.offsetWidth/2;
+    const d=center-itemCenter;
+    const r=Math.max(-20,Math.min(20,d/45));
+    const s=Math.max(.88,1-Math.abs(d)/1100);
+    item.style.transform=`perspective(1200px) rotateY(${r}deg) scale(${s})`;
+  });
+}
+
+update3D();
+gallery.addEventListener('scroll',()=>requestAnimationFrame(update3D));
+
+/* TIMELINE ANIMATION */
+const timelineItems=document.querySelectorAll('.timeline-item');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.3});
+
+timelineItems.forEach(item=>observer.observe(item));
+</script>
+
+</body>
+</html>
